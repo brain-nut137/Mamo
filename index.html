@@ -2,9 +2,9 @@
 <html lang="en"><head><meta charset="utf-8"><title>Mamo – Your Life in Pictures</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <style>
-:root{--bg:#fff7f0;--card:#ffffffcc;--ink:#3b2a3f;--mute:#8a7490;--a:#ff7a9c;--b:#8e7dff;--c:#ffb86b;--line:#e9d9f2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17111d;--card:#2a2034cc;--ink:#f6eaf8;--mute:#b6a2c0;--line:#44345a}}
-:root[data-theme="dark"]{--bg:#17111d;--card:#2a2034cc;--ink:#f6eaf8;--mute:#b6a2c0;--line:#44345a}
+:root{--bg:#f3f7f7;--card:#ffffffcc;--ink:#1f2a33;--mute:#62707c;--a:#16a39a;--b:#5b6ee1;--c:#e8b04a;--line:#d6e2e6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a1f;--card:#1a2a31cc;--ink:#e8f1f3;--mute:#8fa5ae;--line:#2c4550}}
+:root[data-theme="dark"]{--bg:#0f1a1f;--card:#1a2a31cc;--ink:#e8f1f3;--mute:#8fa5ae;--line:#2c4550}
 *{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;min-height:100vh;overflow-x:hidden}
 .blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.45;z-index:0;animation:float 14s ease-in-out infinite}
@@ -19,24 +19,24 @@ h1{font-size:2.3rem;margin:0;background:linear-gradient(90deg,var(--a),var(--b),
 header p{margin:4px 0 0;color:var(--mute);font-style:italic}
 nav{display:flex;gap:6px;background:var(--card);backdrop-filter:blur(10px);padding:5px;border-radius:99px;margin:0 auto 22px;max-width:360px;border:1px solid var(--line)}
 nav button{flex:1;border:0;background:none;color:var(--mute);padding:10px;border-radius:99px;font:inherit;cursor:pointer;transition:.3s}
-nav button.on{background:linear-gradient(135deg,var(--a),var(--b));color:#fff;box-shadow:0 4px 14px #8e7dff55}
-.card{background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-bottom:22px;box-shadow:0 10px 30px #8e7dff22;animation:rise .7s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0)*70ms);transition:transform .35s}
+nav button.on{background:linear-gradient(135deg,var(--a),var(--b));color:#fff;box-shadow:0 4px 14px #5b6ee155}
+.card{background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-bottom:22px;box-shadow:0 10px 30px #5b6ee122;animation:rise .7s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0)*70ms);transition:transform .35s}
 .card:hover{transform:translateY(-4px) rotate(-.4deg)}
 @keyframes rise{from{opacity:0;transform:translateY(30px) scale(.96)}}
 .card img{width:100%;display:block;max-height:460px;object-fit:cover}
 .body{padding:14px 18px 16px}
 .cap{font-size:1.15rem;margin:0 0 4px}.mem{margin:6px 0 0;color:var(--mute);line-height:1.5;font-size:.95rem}
 .meta{display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--mute);gap:8px;flex-wrap:wrap}
-.pill{padding:3px 10px;border-radius:99px;background:linear-gradient(135deg,#ff7a9c22,#8e7dff22);border:1px solid var(--line)}
+.pill{padding:3px 10px;border-radius:99px;background:linear-gradient(135deg,#16a39a22,#5b6ee122);border:1px solid var(--line)}
 .year{font-size:1.9rem;margin:28px 0 10px;text-align:center;color:var(--b);position:relative;animation:rise .6s both}
 .year::before,.year::after{content:"✦";font-size:.9rem;color:var(--a);margin:0 12px;display:inline-block;animation:spin 6s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .tl{position:relative;padding-left:26px}.tl::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:3px;border-radius:3px;background:linear-gradient(var(--a),var(--b),var(--c))}
 .tl .card::before{content:"";position:absolute;left:-26px;top:22px;width:15px;height:15px;border-radius:50%;background:var(--a);border:3px solid var(--bg);animation:pulse 2.4s infinite}
 .tl .card{position:relative;overflow:visible}.tl .card img{border-radius:22px 22px 0 0}
-@keyframes pulse{50%{box-shadow:0 0 0 8px #ff7a9c33}}
+@keyframes pulse{50%{box-shadow:0 0 0 8px #16a39a33}}
 .act{display:flex;gap:8px}.act button,.link{border:0;background:none;color:var(--b);cursor:pointer;font:inherit;font-size:.85rem}
-.fab{position:fixed;right:20px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:5;width:62px;height:62px;border-radius:50%;border:0;font-size:2rem;color:#fff;background:linear-gradient(135deg,var(--a),var(--b));box-shadow:0 8px 24px #8e7dff88;cursor:pointer;animation:bob 3s ease-in-out infinite}
+.fab{position:fixed;right:20px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:5;width:62px;height:62px;border-radius:50%;border:0;font-size:2rem;color:#fff;background:linear-gradient(135deg,var(--a),var(--b));box-shadow:0 8px 24px #5b6ee188;cursor:pointer;animation:bob 3s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-6px) rotate(6deg)}}
 .empty{text-align:center;color:var(--mute);padding:50px 10px;animation:rise .8s both}.empty b{display:block;font-size:2.6rem;animation:bob 3s infinite}
 .modal{position:fixed;inset:0;background:#0008;z-index:10;display:none;align-items:flex-end;justify-content:center;backdrop-filter:blur(4px)}
@@ -71,10 +71,12 @@ textarea{min-height:80px;resize:vertical}
 <button class="link" id="cancel" style="display:block;margin:12px auto 0">Cancel</button>
 <div class="note" id="note"></div>
 </div></div>
-<div class="modal" id="auth"><div class="sheet"><h2>Welcome to Mamo</h2>
+<div class="modal" id="auth"><div class="sheet"><h2>Welcome to Mamo</h2><div class="note" style="margin:-6px 0 4px">Just a name and a password. No email.</div>
 <label>Your name</label><input id="au" autocomplete="username" maxlength="20" placeholder="e.g. prem_k">
 <label>Password (6+ characters)</label><input id="ap" type="password" autocomplete="current-password">
-<button class="go" id="alogin">Log in</button><button class="link" id="areg" style="display:block;margin:12px auto 0">Create a new account</button><div class="note" id="anote"></div></div></div>
+<div class="seg" style="margin-top:16px"><button id="m-login" class="on">Log in</button><button id="m-new">Create account</button></div>
+<button class="go" id="alogin">Log in</button>
+<div class="note" id="anote"></div></div></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script>
 const $=id=>document.getElementById(id);
@@ -111,11 +113,14 @@ async function authGo(kind){
   const email=name+'@mamo.app'; // internal login id only, no email is ever sent
   const r=kind==='login'?await SB.auth.signInWithPassword({email,password}):
     await SB.auth.signUp({email,password,options:{data:{username:name}}});
-  if(r.error){n.textContent=/already registered/i.test(r.error.message)?'That name is taken. Pick another, or log in.':/invalid login/i.test(r.error.message)?'Wrong name or password.':r.error.message;return}
-  if(!r.data.session){n.textContent='Sign-up needs email confirmation turned off in Supabase (see setup note).';return}
+  if(r.error){n.textContent=/already registered/i.test(r.error.message)?'That name is taken. Pick another, or log in.':/invalid login/i.test(r.error.message)?'No account found with this name and password. New here? Tap Create account first.':r.error.message;return}
+  if(!r.data.session){n.textContent='Almost there: in Supabase turn OFF Confirm email (Authentication > Sign In / Providers > Email), then try again.';return}
   $('ap').value='';n.textContent='';await init();
 }
-$('alogin').onclick=()=>authGo('login');$('areg').onclick=()=>authGo('signup');
+let am='login';
+function setAm(m){am=m;$('m-login').classList.toggle('on',m==='login');$('m-new').classList.toggle('on',m==='new');$('alogin').textContent=m==='login'?'Log in':'Create my account';$('ap').autocomplete=m==='login'?'current-password':'new-password';$('anote').textContent=''}
+$('m-login').onclick=()=>setAm('login');$('m-new').onclick=()=>setAm('new');
+$('alogin').onclick=()=>authGo(am==='login'?'login':'signup');
 $('out').onclick=async()=>{await SB.auth.signOut();location.reload()};
 function card(p,i,showAuthor){
   const priv=p.visibility==='private';
